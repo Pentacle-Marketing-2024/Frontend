@@ -1,28 +1,71 @@
-import * as React from 'react';
+import React, { useState } from "react";
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { NavLink, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+import axios from "axios";
 
 const defaultTheme = createTheme();
 
 export default function Login() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      username: data.get('username'),
-      password: data.get('password'),
-    });
+  const navigate = useNavigate();
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = async (event) => {
+    const myHeaders = {
+      "Content-Type": "application/json",
+    };
+
+    const data = {
+      username: username,
+      password: password,
+    };
+
+
+    axios
+      .post("https://localhost:8080/api/admin/login", data, { headers: myHeaders })
+      .then((response) => {
+        console.log("response:" + response.data);
+        if (response.status === 200) {
+          const token = response.data;
+          localStorage.setItem("token", token);
+          setCookie("token", token, 365); // Expires in 365 days
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: `Welcome`,
+            html: "<h3>Login Successfully</h3>",
+            showConfirmButton: false,
+            timer: 1600
+          }).then(() => {
+            navigate("/admin");
+          });
+        } else {
+          throw new Error(response.statusText);
+        }
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Username or password is invalid!"
+        });
+      });
+  };
+
+  const setCookie = (name, value, days) => {
+    const date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    const expires = "; expires=" + date.toGMTString();
+    document.cookie = name + "=" + value + expires + "; path=/";
   };
 
   return (
@@ -43,7 +86,7 @@ export default function Login() {
           <Typography component="h1" variant="h5">
             Login
           </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          <Box noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
               required
@@ -53,6 +96,7 @@ export default function Login() {
               name="username"
               autoComplete="username"
               autoFocus
+              onChange={(a) => setUsername(a.target.value)}
             />
             <TextField
               margin="normal"
@@ -63,9 +107,11 @@ export default function Login() {
               type="password"
               id="password"
               autoComplete="current-password"
+              onChange={(e) => setPassword(e.target.value)}
             />
             <Button
               type="submit"
+              onClick={handleLogin}
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
