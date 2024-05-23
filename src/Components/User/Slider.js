@@ -1,6 +1,6 @@
 import React from 'react';
 import ImageSlider from 'react-simple-image-slider';
-import '../App.css';
+import '../../App.css';
 import { Box } from '@mui/material';
 
 function Slider() {

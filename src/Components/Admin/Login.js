@@ -29,7 +29,6 @@ export default function Login() {
       password: password,
     };
 
-
     axios
       .post("https://localhost:8080/api/admin/login", data, { headers: myHeaders })
       .then((response) => {

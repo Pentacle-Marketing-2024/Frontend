@@ -1,7 +1,7 @@
 import './App.css';
-import Login from './Components/Login';
-import MainPage from './Components/MainPage';
-import FormList from './Components/FormList';
+import Login from './Components/Admin/Login';
+import MainPage from './Components/User/MainPage';
+import FormList from './Components/Admin/FormList';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const App = () => {
