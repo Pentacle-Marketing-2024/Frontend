@@ -24,7 +24,7 @@ function Services() {
                     <Grid container spacing={0}>
                         <Grid item xs={4}>
                             <Item sx={{ backgroundColor: '#1476FF', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 'auto' }}>
-                                <img src="./blue.png" alt="webpage" style={{ width: '60%', height: 'auto' }} />
+                                <img src="./blue 1.png" alt="webpage" style={{ width: '100%', height: '100%' }} />
                             </Item>
                         </Grid>
                         <Grid item xs={4}>
@@ -41,7 +41,7 @@ function Services() {
                         </Grid>
                         <Grid item xs={4}>
                             <Item sx={{ backgroundColor: '#F9C400', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 'auto' }}>
-                                <img src="./yellow.png" alt="webpage" style={{ width: '60%', height: 'auto' }} />
+                                <img src="./yellow 1.png" alt="webpage" style={{ width: '100%', height: '100%' }} />
                             </Item>
                         </Grid>
 
@@ -59,7 +59,7 @@ function Services() {
                         </Grid>
                         <Grid item xs={4}>
                             <Item sx={{ backgroundColor: '#00985C', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 'auto' }}>
-                                <img src="./green.png" alt="webpage" style={{ width: '60%', height: 'auto' }} />
+                                <img src="./green 1.png" alt="webpage" style={{ width: '100%', height: '100%' }} />
                             </Item>
                         </Grid>
                         <Grid item xs={4}>
@@ -77,7 +77,7 @@ function Services() {
 
                         <Grid item xs={4}>
                             <Item sx={{ backgroundColor: '#F9C400', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 'auto' }}>
-                                <img src="./yellow.png" alt="webpage" style={{ width: '60%', height: 'auto' }} />
+                                <img src="./yellow 2.png" alt="webpage" style={{ width: '100%', height: '100%' }} />
                             </Item>
                         </Grid>
                         <Grid item xs={4}>
@@ -94,7 +94,7 @@ function Services() {
                         </Grid>
                         <Grid item xs={4}>
                             <Item sx={{ backgroundColor: '#1476FF', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 'auto' }}>
-                                <img src="./blue.png" alt="webpage" style={{ width: '60%', height: 'auto', marginTop: '4rem' }} />
+                                <img src="./blue 2.png" alt="webpage" style={{ width: '100%', height: '100%' }} />
                             </Item>
                         </Grid>
                     </Grid>

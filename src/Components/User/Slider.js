@@ -6,13 +6,13 @@ import { Box } from '@mui/material';
 function Slider() {
     const fadeImages = [
         {
-            url: './microsoft-edge-FAaz8lkinzs-unsplash.jpg',
+            url: './ảnh-đầu.jpg',
         },
         {
-            url: './surface-1x5jnhtlp3Y-unsplash.jpg',
+            url: './webinar.png',
         },
         {
-            url: './surface-71_s6RDJpGc-unsplash.jpg',
+            url: './background.jpg',
         },
     ];
 

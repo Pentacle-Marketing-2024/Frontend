@@ -176,7 +176,7 @@ export default function Product() {
                                     }}
                                 />
                                 <Box sx={{
-                                    width: '86%',
+                                    width: '90%',
                                     minHeight: 'auto',
                                     backgroundColor: '#EEEEEE',
                                     borderRadius: 1.5,
@@ -197,7 +197,7 @@ export default function Product() {
                                             height: '1rem',
                                             backgroundColor: 'white',
                                             borderRadius: 100,
-                                            padding: '0.2rem 1rem 0.3rem 1rem',
+                                            padding: '0.2rem 0.8rem 0.2rem 0.8rem',
                                             fontSize: '0.85rem',
                                             color: 'gray',
                                         }}>
@@ -224,27 +224,27 @@ export default function Product() {
 
 const itemData = [
     {
-        img: './product1.jpg',
+        img: './product1.png',
         title: 'Simple Burger',
         type: 'Art Direction',
     },
     {
-        img: './product3.jpg',
+        img: './product3.png',
         type: 'Web Development',
         title: 'Data Science',
     },
     {
-        img: './product5.jpg',
+        img: './product5.png',
         type: 'Photography',
         title: 'Portraits',
     },
     {
-        img: './product4.jpg',
+        img: './product4.png',
         type: 'Branding',
         title: 'Health',
     },
     {
-        img: './product2.jpg',
+        img: './product2.png',
         type: 'Design',
         title: 'Fitness',
     },
