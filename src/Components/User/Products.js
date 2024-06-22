@@ -1,11 +1,9 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Masonry from '@mui/lab/Masonry';
-import { styled } from '@mui/material/styles';
-import { Typography, Grid } from '@mui/material';
+import { Typography} from '@mui/material';
 
-const Label = styled(Paper)(({ theme }) => ({
+/*const Label = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
     padding: theme.spacing(0.5),
@@ -13,10 +11,10 @@ const Label = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 0,
-}));
+}));*/
 
 export default function Product() {
-    const Item = styled(Paper)(({ theme }) => ({
+    /*const Item = styled(Paper)(({ theme }) => ({
         backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
         ...theme.typography.body2,
         padding: theme.spacing(1),
@@ -26,7 +24,7 @@ export default function Product() {
         borderRadius: '0',
         boxShadow: '0 0 0 0',
         height: '18rem',
-    }));
+    }));*/
 
     return (
         <div>

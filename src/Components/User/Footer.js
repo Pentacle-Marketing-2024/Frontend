@@ -36,8 +36,7 @@ export default function Footer() {
                     <div style={{ borderTop: '0.01rem solid grey' }}>
                         <div style={{ marginLeft: '2.5rem', fontWeight: '300' }}>
                             <p>Copyright © 2024 Pentacle Marketing
-                                <br />Design: <a style={{ color: 'white', textDecoration: 'none' }} rel="nofollow" href="https://www.tooplate.com/"
-                                    target="_blank">Tooplate</a>
+                                <br />Design: <a style={{ color: 'white', textDecoration: 'none' }} href="https://www.tooplate.com/">Tooplate</a>
                             </p>
                         </div>
                     </div>
@@ -51,14 +50,13 @@ export default function Footer() {
 
                         <ul style={{ listStyleType: 'none', marginTop: '-1rem', lineHeight: '2.3rem', width: '100%' }}>
 
-                            <li style={{ width: '100%' }}><a>Bài đăng Facebook & Instagram</a></li>
+                            <li style={{ width: '100%' }}>Bài đăng Facebook & Instagram</li>
 
-                            <li><a>Thiết kế bộ nhận diện thương hiệu</a></li>
+                            <li>Thiết kế bộ nhận diện thương hiệu</li>
 
-                            <li><a>Lập gian hàng sàn thương mại điện tử</a></li>
+                            <li>Lập gian hàng sàn thương mại điện tử</li>
 
-                            <li><a>Tăng tương tác</a>
-                            </li>
+                            <li>Tăng tương tác</li>
                         </ul>
                     </div>
 
@@ -77,8 +75,7 @@ export default function Footer() {
                     <div style={{ borderTop: '0.01rem solid grey' }}>
                         <div style={{ marginLeft: '2.5rem', fontWeight: '300' }}>
                             <p>Copyright © 2024 Pentacle Marketing
-                                <br />Design: <a style={{ color: 'white', textDecoration: 'none' }} rel="nofollow" href="https://www.tooplate.com/"
-                                    target="_blank">Tooplate</a>
+                            <br />Design: <a style={{ color: 'white', textDecoration: 'none' }} href="https://www.tooplate.com/">Tooplate</a>
                             </p>
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -7,9 +7,7 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-scroll';
 
@@ -27,22 +25,22 @@ function ResponsiveAppBar() {
     setAnchorElNav(null);
   };
 
-  const handleCloseMenuOnOutsideClick = (event) => {
+  const handleCloseMenuOnOutsideClick = useCallback((event) => {
     if (anchorElNav && !anchorElNav.contains(event.target)) {
       handleCloseNavMenu();
     }
-  };
+  }, [anchorElNav]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     document.addEventListener('click', handleCloseMenuOnOutsideClick);
     return () => {
       document.removeEventListener('click', handleCloseMenuOnOutsideClick);
     };
-  }, [anchorElNav]);
+  }, [anchorElNav, handleCloseMenuOnOutsideClick]);
 
-  const [isTop, setIsTop] = React.useState(true);
+  const [isTop, setIsTop] = useState(true);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
       setIsTop(scrollTop === 0);

@@ -71,7 +71,7 @@ export default function StickyHeadTable() {
           setLoading(false);
         });
     }
-  }, []);
+  }, [loading]);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
