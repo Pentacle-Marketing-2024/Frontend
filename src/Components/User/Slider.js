@@ -6,13 +6,13 @@ import { Box } from '@mui/material';
 function Slider() {
     const fadeImages = [
         {
-            url: './ảnh-đầu.jpg',
+            url: './slider.jpg',
         },
         {
             url: './webinar.png',
         },
         {
-            url: './ảnh-đầu.jpg',
+            url: './slider.jpg',
         },
     ];
 

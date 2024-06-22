@@ -1,9 +1,5 @@
 import * as React from 'react';
-import Paper from '@mui/material/Paper';
-import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
-import { styled } from '@mui/material/styles';
-import { Button, Input, MenuItem, TextField } from '@mui/material';
 
 export default function Footer() {
     return (
@@ -15,14 +11,13 @@ export default function Footer() {
 
                         <ul style={{ listStyleType: 'none', marginTop: '-1rem', lineHeight: '2.3rem', width: '100%' }}>
 
-                            <li style={{ width: '100%' }}><a>Bài đăng Facebook & Instagram</a></li>
+                            <li style={{ width: '100%' }}>Bài đăng Facebook & Instagram</li>
 
-                            <li><a>Thiết kế bộ nhận diện thương hiệu</a></li>
+                            <li>Thiết kế bộ nhận diện thương hiệu</li>
 
-                            <li><a>Lập gian hàng sàn thương mại điện tử</a></li>
+                            <li>Lập gian hàng sàn thương mại điện tử</li>
 
-                            <li><a>Tăng tương tác</a>
-                            </li>
+                            <li>Tăng tương tác</li>
                         </ul>
                     </div>
 

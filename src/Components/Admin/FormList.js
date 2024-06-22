@@ -32,7 +32,6 @@ export default function StickyHeadTable() {
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const [rows, setRows] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
-  const [error, setError] = React.useState(null);
   const [searchNameValue, setSearchNameValue] = React.useState("");
   const [searchEmailValue, setSearchEmailValue] = React.useState("");
 
@@ -52,7 +51,7 @@ export default function StickyHeadTable() {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`
       }
-    })
+    }, [loading])
         .then((response) => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -63,12 +62,12 @@ export default function StickyHeadTable() {
           if (data) {
             setRows(data);
           } else {
-            setError('No data found');
+            console.error('No data found');
           }
           setLoading(false);
         })
         .catch((error) => {
-          setError(error.message);
+          console.error(error.message);
           setLoading(false);
         });
     }
@@ -110,7 +109,7 @@ export default function StickyHeadTable() {
         }
       })
       .catch((error) => {
-        setError(error.message);
+        console.error(error.message);
         setLoading(false);
         setRows([]);
       });
@@ -137,7 +136,7 @@ export default function StickyHeadTable() {
         }
       })
       .catch((error) => {
-        setError(error.message);
+        console.error(error.message);
         setLoading(false);
         setRows([]);
       });
