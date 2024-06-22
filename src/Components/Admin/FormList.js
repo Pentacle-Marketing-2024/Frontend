@@ -48,7 +48,7 @@ export default function StickyHeadTable() {
 
   useEffect(() => {
     if (loading) {
-      fetch('https://localhost:8080/api/form', {
+      fetch('https://pentaclemarketing.azurewebsites.net/api/form', {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`
       }
@@ -90,9 +90,9 @@ export default function StickyHeadTable() {
   };
 
   const searchByName = () => {
-    let api = "https://localhost:8080/api/form";
+    let api = "https://pentaclemarketing.azurewebsites.net/api/form";
     if (searchNameValue !== "") {
-      api = "https://localhost:8080/api/form/searchByFullName?fullName=" + searchNameValue;
+      api = "https://pentaclemarketing.azurewebsites.net/api/form/searchByFullName?fullName=" + searchNameValue;
     }
     axios
       .get(api, {
@@ -117,9 +117,9 @@ export default function StickyHeadTable() {
   };
 
   const searchByEmail = () => {
-    let api = "https://localhost:8080/api/form";
+    let api = "https://pentaclemarketing.azurewebsites.net/api/form";
     if (searchEmailValue !== "") {
-      api = "https://localhost:8080/api/form/searchByEmail?email=" + searchEmailValue;
+      api = "https://pentaclemarketing.azurewebsites.net/api/form/searchByEmail?email=" + searchEmailValue;
     }
     axios
       .get(api, {

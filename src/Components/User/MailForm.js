@@ -75,7 +75,7 @@ export default function MailForm() {
 
         if (valid) {
             try {
-                await axios.post("https://localhost:8080/api/form/create", formData);
+                await axios.post("https://pentaclemarketing.azurewebsites.net/api/form/create", formData);
                 Swal.fire({
                     icon: "success",
                     title: "Thành công!",

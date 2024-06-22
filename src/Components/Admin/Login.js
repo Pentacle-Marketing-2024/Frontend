@@ -30,7 +30,7 @@ export default function Login() {
     };
 
     axios
-      .post("https://localhost:8080/api/admin/login", data, { headers: myHeaders })
+      .post("https://pentaclemarketing.azurewebsites.net/api/admin/login", data, { headers: myHeaders })
       .then((response) => {
         console.log("response:" + response.data);
         if (response.status === 200) {
