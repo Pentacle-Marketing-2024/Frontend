@@ -108,7 +108,7 @@ function Services() {
                     <Grid container spacing={0}>
                         <Grid item xs={12}>
                             <Item sx={{ backgroundColor: '#1476FF', minHeight: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
-                                <img src="./blue.png" alt="webpage" style={{ width: '40%', height: 'auto' }} />
+                                <img src="./blue 1.png" alt="webpage" style={{ width: '100%', height: '100%' }} />
                             </Item>
                         </Grid>
                         <Grid item xs={12}>
@@ -125,7 +125,7 @@ function Services() {
                         </Grid>
                         <Grid item xs={12}>
                             <Item sx={{ backgroundColor: '#F9C400', minHeight: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
-                                <img src="./yellow.png" alt="webpage" style={{ width: '40%', height: 'auto' }} />
+                                <img src="./yellow 1.png" alt="webpage" style={{ width: '100%', height: '100%' }} />
                             </Item>
                         </Grid>
 
@@ -143,9 +143,10 @@ function Services() {
                         </Grid>
                         <Grid item xs={12}>
                             <Item sx={{ backgroundColor: '#00985C', minHeight: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
-                                <img src="./green.png" alt="webpage" style={{ width: '40%', height: 'auto' }} />
+                                <img src="./green 1.png" alt="webpage" style={{ width: '100%', height: '100%' }} />
                             </Item>
                         </Grid>
+
                         <Grid item xs={12}>
                             <Item sx={{ minHeight: 'auto', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                                 <div style={{ margin: '1rem ' }}>
@@ -158,12 +159,12 @@ function Services() {
                                 </div>
                             </Item>
                         </Grid>
-
                         <Grid item xs={12}>
                             <Item sx={{ backgroundColor: '#F9C400', minHeight: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
-                                <img src="./yellow.png" alt="webpage" style={{ width: '40%', height: 'auto' }} />
+                                <img src="./yellow 2.png" alt="webpage" style={{ width: '100%', height: '100%' }} />
                             </Item>
                         </Grid>
+
                         <Grid item xs={12}>
                             <Item sx={{ minHeight: 'auto', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                                 <div style={{ margin: '1rem ' }}>
@@ -178,7 +179,7 @@ function Services() {
                         </Grid>
                         <Grid item xs={12}>
                             <Item sx={{ backgroundColor: '#1476FF', minHeight: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
-                                <img src="./blue.png" alt="webpage" style={{ width: '40%', height: 'auto' }} />
+                                <img src="./blue 2.png" alt="webpage" style={{ width: '100%', height: '100%' }} />
                             </Item>
                         </Grid>
                     </Grid>

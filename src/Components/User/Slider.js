@@ -12,7 +12,7 @@ function Slider() {
             url: './webinar.png',
         },
         {
-            url: './background.jpg',
+            url: './ảnh-đầu.jpg',
         },
     ];
 
