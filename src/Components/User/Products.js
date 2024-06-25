@@ -28,7 +28,7 @@ export default function Product() {
 
     return (
         <div>
-            <Box sx={{ width: '100%', minHeight: 829, display: { xs: 'none', lg: 'block', md: 'none' } }}>
+            <Box sx={{ width: '100%', minHeight: 829, display: { lg: 'block', xs: 'none', md: 'none', sm: 'none' } }}>
                 <Typography sx={{ marginTop: '5rem', marginBottom: '2rem', textAlign: 'center', fontSize: '2.5rem', fontWeight: '700' }}>Sản phẩm của chúng tôi</Typography>
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
                     <Masonry columns={3} spacing={3} sx={{ width: '80rem' }}>
@@ -48,18 +48,81 @@ export default function Product() {
                                     }}
                                 />
                                 <Box sx={{
-                                    width: '86%',
+                                    width: '90%',
                                     minHeight: 'auto',
                                     backgroundColor: '#EEEEEE',
                                     borderRadius: 1.5,
-                                    margin: '-35% 7% 14% 7%',
+                                    margin: '-33% 7% 14% 5%',
                                     zIndex: 1,
                                     position: 'relative',
                                     display: 'grid',
                                     boxShadow: '0rem 0.4rem 0rem 0rem #DEDEDE',
                                 }}>
                                     <div style={{
-                                        marginTop: '1.3rem',
+                                        marginTop: '1rem',
+                                        marginLeft: '1.5rem',
+                                        height: 'auto',
+                                        width: '70%',
+                                        textAlign: 'left',
+                                    }}>
+                                        <span style={{
+                                            height: '1rem',
+                                            backgroundColor: 'white',
+                                            borderRadius: 100,
+                                            padding: '0.2rem 1rem 0.3rem 1rem',
+                                            fontSize: '0.85rem',
+                                            color: 'gray',
+                                        }}>
+                                            {item.type}
+                                        </span>
+                                    </div>
+                                    <div style={{
+                                        margin: '0.5rem 1rem 2rem 1.5rem',
+                                        height: '1.7rem',
+                                        width: '90%',
+                                        textAlign: 'left',
+                                    }}>
+                                        <Typography sx={{ fontSize: '1.35rem', fontWeight: '500', fontFamily: "sans-serif", lineHeight: "1.7rem" }}>{item.title}</Typography>
+                                    </div>
+                                </Box>
+                            </div>
+                        ))}
+                    </Masonry>
+                </div>
+            </Box>
+
+            <Box sx={{ width: '100%', minHeight: 829, display: { lg: 'none', xs: 'none', md: 'block', sm: 'none' } }}>
+                <Typography sx={{ marginTop: '5rem', marginBottom: '2rem', textAlign: 'center', fontSize: '2.5rem', fontWeight: '700' }}>Sản phẩm của chúng tôi</Typography>
+                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
+                    <Masonry columns={3} spacing={3} sx={{ width: '80rem' }}>
+                        {itemData.map((item, index) => (
+                            <div key={index}>
+                                <img
+                                    srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
+                                    src={`${item.img}?w=162&auto=format`}
+                                    alt={item.title}
+                                    loading="lazy"
+                                    style={{
+                                        borderRadius: 5,
+                                        display: 'block',
+                                        width: '100%',
+                                        zIndex: 0,
+                                        position: 'relative'
+                                    }}
+                                />
+                                <Box sx={{
+                                    width: '90%',
+                                    minHeight: 'auto',
+                                    backgroundColor: '#EEEEEE',
+                                    borderRadius: 1.5,
+                                    margin: '-38% 7% 14% 5%',
+                                    zIndex: 1,
+                                    position: 'relative',
+                                    display: 'grid',
+                                    boxShadow: '0rem 0.4rem 0rem 0rem #DEDEDE',
+                                }}>
+                                    <div style={{
+                                        marginTop: '1rem',
                                         marginLeft: '2rem',
                                         height: 'auto',
                                         width: '70%',
@@ -77,12 +140,12 @@ export default function Product() {
                                         </span>
                                     </div>
                                     <div style={{
-                                        margin: '0.7rem 1rem 2rem 2rem',
+                                        margin: '0.5rem 1rem 2rem 1.5rem',
                                         height: '1.7rem',
                                         width: '90%',
                                         textAlign: 'left',
                                     }}>
-                                        <Typography sx={{ fontSize: '2rem', fontWeight: '500' }}>{item.title}</Typography>
+                                        <Typography sx={{ fontSize: '1.2rem', fontWeight: '500', fontFamily: "sans-serif", lineHeight: "1.5rem" }}>{item.title}</Typography>
                                     </div>
                                 </Box>
                             </div>
@@ -91,10 +154,10 @@ export default function Product() {
                 </div>
             </Box>
 
-            <Box sx={{ width: '100%', minHeight: 829, display: { xs: 'none', lg: 'none', md: 'block' } }}>
-                <Typography sx={{ marginTop: '5rem', marginBottom: '2rem', textAlign: 'center', fontSize: '2.5rem', fontWeight: '700' }}>Sản phẩm của chúng tôi</Typography>
+            <Box sx={{ width: '100%', minHeight: 829, display: { lg: 'none', xs: 'none', md: 'none', sm: 'block' } }}>
+            <Typography sx={{ marginTop: '5rem', marginBottom: '2rem', textAlign: 'center', fontSize: '2.5rem', fontWeight: '700' }}>Sản phẩm của chúng tôi</Typography>
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
-                    <Masonry columns={3} spacing={3} sx={{ width: '65rem' }}>
+                    <Masonry columns={1} spacing={0} sx={{ width: '35rem' }}>
                         {itemData.map((item, index) => (
                             <div key={index}>
                                 <img
@@ -111,19 +174,19 @@ export default function Product() {
                                     }}
                                 />
                                 <Box sx={{
-                                    width: '86%',
+                                    width: '90%',
                                     minHeight: 'auto',
                                     backgroundColor: '#EEEEEE',
                                     borderRadius: 1.5,
-                                    margin: '-37% 7% 14% 7%',
+                                    margin: '-23% 5% 20% 5%',
                                     zIndex: 1,
                                     position: 'relative',
                                     display: 'grid',
                                     boxShadow: '0rem 0.4rem 0rem 0rem #DEDEDE',
                                 }}>
                                     <div style={{
-                                        marginTop: '0.7rem',
-                                        marginLeft: '2rem',
+                                        marginTop: '1.2rem',
+                                        marginLeft: '1.5rem',
                                         height: 'auto',
                                         width: '70%',
                                         textAlign: 'left',
@@ -132,20 +195,20 @@ export default function Product() {
                                             height: '1rem',
                                             backgroundColor: 'white',
                                             borderRadius: 100,
-                                            padding: '0.2rem 1rem 0.3rem 1rem',
-                                            fontSize: '0.75rem',
+                                            padding: '0.2rem 0.8rem 0.2rem 0.8rem',
+                                            fontSize: '0.85rem',
                                             color: 'gray',
                                         }}>
                                             {item.type}
                                         </span>
                                     </div>
                                     <div style={{
-                                        margin: '0.5rem 0.5rem 0.7rem 2rem',
+                                        margin: '0.6rem 0.5rem 0.5rem 1.5rem',
                                         height: '2rem',
                                         width: '90%',
                                         textAlign: 'left',
                                     }}>
-                                        <Typography sx={{ fontSize: '1.5rem', fontWeight: '500' }}>{item.title}</Typography>
+                                        <Typography sx={{ fontSize: '1.35rem', fontFamily:"sans-serif", fontWeight:'500', fontFamily: "sans-serif", lineHeight: "1.5rem"  }}>{item.title}</Typography>
                                     </div>
                                 </Box>
                             </div>
@@ -154,7 +217,7 @@ export default function Product() {
                 </div>
             </Box>
 
-            <Box sx={{ width: '100%', minHeight: 829, display: { xs: 'block', lg: 'none', md: 'none' } }}>
+            <Box sx={{ width: '100%', minHeight: 829, display: { lg: 'none', xs: 'block', sm: 'none', md: 'none' } }}>
                 <Typography sx={{ marginTop: '5rem', marginBottom: '2rem', textAlign: 'center', fontSize: '2.5rem', fontWeight: '700' }}>Sản phẩm của chúng tôi</Typography>
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
                     <Masonry columns={1} spacing={0} sx={{ width: '35rem' }}>
@@ -178,7 +241,7 @@ export default function Product() {
                                     minHeight: 'auto',
                                     backgroundColor: '#EEEEEE',
                                     borderRadius: 1.5,
-                                    margin: '-27% 7% 20% 7%',
+                                    margin: '-25% 5% 20% 5%',
                                     zIndex: 1,
                                     position: 'relative',
                                     display: 'grid',
@@ -186,7 +249,7 @@ export default function Product() {
                                 }}>
                                     <div style={{
                                         marginTop: '1.2rem',
-                                        marginLeft: '2rem',
+                                        marginLeft: '1.5rem',
                                         height: 'auto',
                                         width: '70%',
                                         textAlign: 'left',
@@ -203,12 +266,12 @@ export default function Product() {
                                         </span>
                                     </div>
                                     <div style={{
-                                        margin: '0.6rem 0.5rem 1rem 2rem',
+                                        margin: '0.6rem 0.5rem 0.5rem 1.5rem',
                                         height: '2rem',
                                         width: '90%',
                                         textAlign: 'left',
                                     }}>
-                                        <Typography sx={{ fontSize: '1.8rem', fontWeight: '500' }}>{item.title}</Typography>
+                                        <Typography sx={{ fontSize: '1.35rem', fontFamily:"sans-serif", fontWeight:'500', fontFamily: "sans-serif", lineHeight: "1.5rem"  }}>{item.title}</Typography>
                                     </div>
                                 </Box>
                             </div>
