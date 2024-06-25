@@ -130,7 +130,7 @@ function ResponsiveAppBar() {
                 duration={500}
                 sx={{ textDecoration: 'none', color: isTop ? "white" : 'gray', marginRight: '2rem', display: 'block' }}
               >
-                <Button sx={{ my: 2, textDecoration: 'none', color: isTop ? "white" : 'gray', marginRight: '2rem', display: 'block',  textShadow: "0.5px 0px 2px #000000", fontWeight: "700"}}>
+                <Button sx={{ my: 2, textDecoration: 'none', color: isTop ? "white" : 'gray', marginRight: '2rem', display: 'block', fontWeight: "700"}}>
                   {page}
                 </Button>
               </Link>
