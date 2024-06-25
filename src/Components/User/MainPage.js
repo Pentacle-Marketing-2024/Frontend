@@ -7,7 +7,7 @@ import Services from './Services';
 
 export default function MainPage() {
   return (
-    <div className="App">
+    <div className="App" style={{ width: "100%", overflowX: "hidden"}}>
       <Header/>
       <section id="home">
         <div>Welcome to our website</div>

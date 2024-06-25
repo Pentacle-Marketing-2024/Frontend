@@ -60,7 +60,7 @@ function ResponsiveAppBar() {
               display: { xs: 'none', md: 'flex' },
             }}
           >
-            <img src={isTop ? "./logo_trang.png" : "./logo.png"} alt="logo" width={'auto'} height={100} />
+            <img src={isTop ? "./logo_trang.png" : "./logo.png"} alt="logo" width={'auto'} height={100}/>
           </Typography>
 
 
@@ -130,7 +130,7 @@ function ResponsiveAppBar() {
                 duration={500}
                 sx={{ textDecoration: 'none', color: isTop ? "white" : 'gray', marginRight: '2rem', display: 'block' }}
               >
-                <Button sx={{ my: 2, textDecoration: 'none', color: isTop ? "white" : 'gray', marginRight: '2rem', display: 'block' }}>
+                <Button sx={{ my: 2, textDecoration: 'none', color: isTop ? "white" : 'gray', marginRight: '2rem', display: 'block',  textShadow: "0.5px 0px 2px #000000", fontWeight: "700"}}>
                   {page}
                 </Button>
               </Link>

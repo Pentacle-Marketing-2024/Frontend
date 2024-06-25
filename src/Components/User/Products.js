@@ -223,18 +223,18 @@ export default function Product() {
 const itemData = [
     {
         img: './product1.png',
-        title: 'Simple Burger',
+        title: 'Content facebook',
         type: 'Art Direction',
     },
     {
         img: './product3.png',
         type: 'Web Development',
-        title: 'Data Science',
+        title: 'Content instagram',
     },
     {
         img: './product5.png',
         type: 'Photography',
-        title: 'Portraits',
+        title: 'Tăng tương tác',
     },
     {
         img: './product4.png',
@@ -244,6 +244,6 @@ const itemData = [
     {
         img: './product2.png',
         type: 'Design',
-        title: 'Fitness',
+        title: 'Thiết kế nhận diện thương hiệu',
     },
 ];
