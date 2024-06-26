@@ -52,32 +52,14 @@ export default function Product() {
                                     minHeight: 'auto',
                                     backgroundColor: '#EEEEEE',
                                     borderRadius: 1.5,
-                                    margin: '-33% 7% 14% 5%',
+                                    margin: '-25% 7% 14% 5%',
                                     zIndex: 1,
                                     position: 'relative',
                                     display: 'grid',
                                     boxShadow: '0rem 0.4rem 0rem 0rem #DEDEDE',
                                 }}>
                                     <div style={{
-                                        marginTop: '1rem',
-                                        marginLeft: '1.5rem',
-                                        height: 'auto',
-                                        width: '70%',
-                                        textAlign: 'left',
-                                    }}>
-                                        <span style={{
-                                            height: '1rem',
-                                            backgroundColor: 'white',
-                                            borderRadius: 100,
-                                            padding: '0.2rem 1rem 0.3rem 1rem',
-                                            fontSize: '0.85rem',
-                                            color: 'gray',
-                                        }}>
-                                            {item.type}
-                                        </span>
-                                    </div>
-                                    <div style={{
-                                        margin: '0.5rem 1rem 2rem 1.5rem',
+                                        margin: '1rem 1rem 2rem 1.5rem',
                                         height: '1.7rem',
                                         width: '90%',
                                         textAlign: 'left',
@@ -115,32 +97,14 @@ export default function Product() {
                                     minHeight: 'auto',
                                     backgroundColor: '#EEEEEE',
                                     borderRadius: 1.5,
-                                    margin: '-38% 7% 14% 5%',
+                                    margin: '-32% 7% 14% 5%',
                                     zIndex: 1,
                                     position: 'relative',
                                     display: 'grid',
                                     boxShadow: '0rem 0.4rem 0rem 0rem #DEDEDE',
                                 }}>
                                     <div style={{
-                                        marginTop: '1rem',
-                                        marginLeft: '2rem',
-                                        height: 'auto',
-                                        width: '70%',
-                                        textAlign: 'left',
-                                    }}>
-                                        <span style={{
-                                            height: '1rem',
-                                            backgroundColor: 'white',
-                                            borderRadius: 100,
-                                            padding: '0.2rem 1rem 0.3rem 1rem',
-                                            fontSize: '0.85rem',
-                                            color: 'gray',
-                                        }}>
-                                            {item.type}
-                                        </span>
-                                    </div>
-                                    <div style={{
-                                        margin: '0.5rem 1rem 2rem 1.5rem',
+                                        margin: '1rem 1rem 2rem 1.5rem',
                                         height: '1.7rem',
                                         width: '90%',
                                         textAlign: 'left',
@@ -178,32 +142,14 @@ export default function Product() {
                                     minHeight: 'auto',
                                     backgroundColor: '#EEEEEE',
                                     borderRadius: 1.5,
-                                    margin: '-23% 5% 20% 5%',
+                                    margin: '-17% 5% 20% 5%',
                                     zIndex: 1,
                                     position: 'relative',
                                     display: 'grid',
                                     boxShadow: '0rem 0.4rem 0rem 0rem #DEDEDE',
                                 }}>
                                     <div style={{
-                                        marginTop: '1.2rem',
-                                        marginLeft: '1.5rem',
-                                        height: 'auto',
-                                        width: '70%',
-                                        textAlign: 'left',
-                                    }}>
-                                        <span style={{
-                                            height: '1rem',
-                                            backgroundColor: 'white',
-                                            borderRadius: 100,
-                                            padding: '0.2rem 0.8rem 0.2rem 0.8rem',
-                                            fontSize: '0.85rem',
-                                            color: 'gray',
-                                        }}>
-                                            {item.type}
-                                        </span>
-                                    </div>
-                                    <div style={{
-                                        margin: '0.6rem 0.5rem 0.5rem 1.5rem',
+                                        margin: '1rem 0.5rem 0.5rem 1.5rem',
                                         height: '2rem',
                                         width: '90%',
                                         textAlign: 'left',
@@ -241,32 +187,14 @@ export default function Product() {
                                     minHeight: 'auto',
                                     backgroundColor: '#EEEEEE',
                                     borderRadius: 1.5,
-                                    margin: '-25% 5% 20% 5%',
+                                    margin: '-18% 5% 20% 5%',
                                     zIndex: 1,
                                     position: 'relative',
                                     display: 'grid',
                                     boxShadow: '0rem 0.4rem 0rem 0rem #DEDEDE',
                                 }}>
                                     <div style={{
-                                        marginTop: '1.2rem',
-                                        marginLeft: '1.5rem',
-                                        height: 'auto',
-                                        width: '70%',
-                                        textAlign: 'left',
-                                    }}>
-                                        <span style={{
-                                            height: '1rem',
-                                            backgroundColor: 'white',
-                                            borderRadius: 100,
-                                            padding: '0.2rem 0.8rem 0.2rem 0.8rem',
-                                            fontSize: '0.85rem',
-                                            color: 'gray',
-                                        }}>
-                                            {item.type}
-                                        </span>
-                                    </div>
-                                    <div style={{
-                                        margin: '0.6rem 0.5rem 0.5rem 1.5rem',
+                                        margin: '1rem 0.5rem 0.5rem 1.5rem',
                                         height: '2rem',
                                         width: '90%',
                                         textAlign: 'left',
@@ -286,27 +214,22 @@ export default function Product() {
 const itemData = [
     {
         img: './product1.png',
-        title: 'Content facebook',
-        type: 'Art Direction',
+        title: 'Content Facebook',
     },
     {
         img: './product3.png',
-        type: 'Web Development',
-        title: 'Content instagram',
+        title: 'Content Instagram',
     },
     {
         img: './product5.png',
-        type: 'Photography',
         title: 'Tăng tương tác',
     },
     {
         img: './product4.png',
-        type: 'Branding',
-        title: 'Health',
+        title: 'OOH',
     },
     {
         img: './product2.png',
-        type: 'Design',
         title: 'Thiết kế nhận diện thương hiệu',
     },
 ];
