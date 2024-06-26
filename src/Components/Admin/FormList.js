@@ -32,12 +32,14 @@ export default function StickyHeadTable() {
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const [rows, setRows] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
+  const [error, setError] = React.useState(null);
   const [searchNameValue, setSearchNameValue] = React.useState("");
   const [searchEmailValue, setSearchEmailValue] = React.useState("");
 
 
   useEffect(() => {
     const token = localStorage.getItem("token");
+    console.log(localStorage.getItem("token"));
     if (!token) {
       window.location.href = "/login";
     } else {
@@ -51,7 +53,7 @@ export default function StickyHeadTable() {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`
       }
-    }, [loading])
+    })
         .then((response) => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -62,16 +64,16 @@ export default function StickyHeadTable() {
           if (data) {
             setRows(data);
           } else {
-            console.error('No data found');
+            setError('No data found');
           }
           setLoading(false);
         })
         .catch((error) => {
-          console.error(error.message);
+          setError(error.message);
           setLoading(false);
         });
     }
-  }, [loading]);
+  }, []);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -109,7 +111,7 @@ export default function StickyHeadTable() {
         }
       })
       .catch((error) => {
-        console.error(error.message);
+        setError(error.message);
         setLoading(false);
         setRows([]);
       });
@@ -136,7 +138,7 @@ export default function StickyHeadTable() {
         }
       })
       .catch((error) => {
-        console.error(error.message);
+        setError(error.message);
         setLoading(false);
         setRows([]);
       });
