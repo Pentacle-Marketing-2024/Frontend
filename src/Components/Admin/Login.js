@@ -1,21 +1,21 @@
 import React, { useState } from "react";
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
+import TextField from "@mui/material/TextField";
+import Box from "@mui/material/Box";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import axios from "axios";
-import IconButton from '@mui/material/IconButton';
-import InputAdornment from '@mui/material/InputAdornment';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import './Login.css';
+import IconButton from "@mui/material/IconButton";
+import InputAdornment from "@mui/material/InputAdornment";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import "./Login.css";
 
 const defaultTheme = createTheme();
 
@@ -24,7 +24,6 @@ export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-
 
   const handleLogin = async (event) => {
     const myHeaders = {
@@ -37,7 +36,11 @@ export default function Login() {
     };
 
     axios
-      .post("https://pentaclemarketing.azurewebsites.net/api/admin/login", data, { headers: myHeaders })
+      .post(
+        "https://pentaclemarketings.azurewebsites.net/api/admin/login",
+        data,
+        { headers: myHeaders }
+      )
       .then((response) => {
         console.log("response:" + response.data);
         if (response.status === 200) {
@@ -50,7 +53,7 @@ export default function Login() {
             title: `Welcome`,
             html: "<h3>Login Successfully</h3>",
             showConfirmButton: false,
-            timer: 1600
+            timer: 1600,
           }).then(() => {
             navigate("/admin");
           });
@@ -62,7 +65,7 @@ export default function Login() {
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: "Username or password is invalid!"
+          text: "Username or password is invalid!",
         });
       });
   };
@@ -82,17 +85,21 @@ export default function Login() {
     event.preventDefault();
   };
 
-   return (
+  return (
     <ThemeProvider theme={defaultTheme}>
       <div className="background-image"></div> {/* Background Image Div */}
-      <div className="login-container"> {/* Center the login box */}
-        <Container component="main" maxWidth="xs" className="login-box"> {/* Add login-box class */}
+      <div className="login-container">
+        {" "}
+        {/* Center the login box */}
+        <Container component="main" maxWidth="xs" className="login-box">
+          {" "}
+          {/* Add login-box class */}
           <CssBaseline />
           <Box
             sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
             }}
           >
             <Box
@@ -100,9 +107,9 @@ export default function Login() {
               sx={{
                 height: 80,
                 width: 220,
-                maxWidth: '100%',
-                maxHeight: '100%',
-                borderRadius: '50%',
+                maxWidth: "100%",
+                maxHeight: "100%",
+                borderRadius: "50%",
                 marginBottom: 1,
               }}
               alt="Avatar"
@@ -129,7 +136,7 @@ export default function Login() {
                 fullWidth
                 name="password"
                 label="Password"
-                type={showPassword ? 'text' : 'password'}
+                type={showPassword ? "text" : "password"}
                 id="password"
                 autoComplete="current-password"
                 onChange={(e) => setPassword(e.target.value)}

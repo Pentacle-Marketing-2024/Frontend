@@ -1,28 +1,28 @@
-import Paper from '@mui/material/Paper';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TablePagination from '@mui/material/TablePagination';
-import TableRow from '@mui/material/TableRow';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Box from '@mui/material/Box';
+import Paper from "@mui/material/Paper";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TablePagination from "@mui/material/TablePagination";
+import TableRow from "@mui/material/TableRow";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import Box from "@mui/material/Box";
 import axios from "axios";
 import React, { useEffect } from "react";
 
 const columns = [
-  { id: 'id', label: 'ID', minWidth: 50 },
-  { id: 'fullName', label: 'Full Name', minWidth: 170 },
-  { id: 'email', label: 'Email', minWidth: 170 },
-  { id: 'method', label: 'Method', minWidth: 100 },
-  { id: 'description', label: 'Description', minWidth: 170 },
+  { id: "id", label: "ID", minWidth: 50 },
+  { id: "fullName", label: "Full Name", minWidth: 170 },
+  { id: "email", label: "Email", minWidth: 170 },
+  { id: "method", label: "Method", minWidth: 100 },
+  { id: "description", label: "Description", minWidth: 170 },
   {
-    id: 'createDate',
-    label: 'Create Date',
+    id: "createDate",
+    label: "Create Date",
     minWidth: 170,
-    align: 'right',
+    align: "right",
     format: (value) => new Date(value).toLocaleDateString(),
   },
 ];
@@ -36,7 +36,6 @@ export default function StickyHeadTable() {
   const [searchNameValue, setSearchNameValue] = React.useState("");
   const [searchEmailValue, setSearchEmailValue] = React.useState("");
 
-
   useEffect(() => {
     const token = localStorage.getItem("token");
     console.log(localStorage.getItem("token"));
@@ -49,14 +48,14 @@ export default function StickyHeadTable() {
 
   useEffect(() => {
     if (loading) {
-      fetch('https://pentaclemarketing.azurewebsites.net/api/form', {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem("token")}`
-      }
-    })
+      fetch("https://pentaclemarketings.azurewebsites.net/api/form", {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
         .then((response) => {
           if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error("Network response was not ok");
           }
           return response.json();
         })
@@ -64,7 +63,7 @@ export default function StickyHeadTable() {
           if (data) {
             setRows(data);
           } else {
-            setError('No data found');
+            setError("No data found");
           }
           setLoading(false);
         })
@@ -91,22 +90,23 @@ export default function StickyHeadTable() {
   };
 
   const searchByName = () => {
-    let api = "https://pentaclemarketing.azurewebsites.net/api/form";
+    let api = "https://pentaclemarketings.azurewebsites.net/api/form";
     if (searchNameValue !== "") {
-      api = "https://pentaclemarketing.azurewebsites.net/api/form/searchByFullName?fullName=" + searchNameValue;
+      api =
+        "https://pentaclemarketings.azurewebsites.net/api/form/searchByFullName?fullName=" +
+        searchNameValue;
     }
     axios
       .get(api, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`
-        }
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
       })
       .then((response) => {
         if (response.status === 200) {
           setRows(response.data);
           setSearchEmailValue("");
-        }
-        else {
+        } else {
           throw new Error(response.statusText);
         }
       })
@@ -118,22 +118,23 @@ export default function StickyHeadTable() {
   };
 
   const searchByEmail = () => {
-    let api = "https://pentaclemarketing.azurewebsites.net/api/form";
+    let api = "https://pentaclemarketings.azurewebsites.net/api/form";
     if (searchEmailValue !== "") {
-      api = "https://pentaclemarketing.azurewebsites.net/api/form/searchByEmail?email=" + searchEmailValue;
+      api =
+        "https://pentaclemarketings.azurewebsites.net/api/form/searchByEmail?email=" +
+        searchEmailValue;
     }
     axios
       .get(api, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`
-        }
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
       })
       .then((response) => {
         if (response.status === 200) {
           setRows(response.data);
           setSearchNameValue("");
-        }
-        else {
+        } else {
           throw new Error(response.statusText);
         }
       })
@@ -144,18 +145,25 @@ export default function StickyHeadTable() {
       });
   };
 
-
   return (
     <div>
       <Button
         onClick={logout}
         fullWidth
         variant="contained"
-        sx={{ mt: 3, mb: 2, float: 'right', width: '10rem', backgroundColor: 'red' }}
-      >Logout</Button>
-      <Paper sx={{ width: '96%', overflow: 'hidden', margin: '2%' }}>
-        <Box sx={{ display: 'flex', float: 'right' }}>
-          <Box sx={{ mt: 1, width: '20rem', mr: 5 }}>
+        sx={{
+          mt: 3,
+          mb: 2,
+          float: "right",
+          width: "10rem",
+          backgroundColor: "red",
+        }}
+      >
+        Logout
+      </Button>
+      <Paper sx={{ width: "96%", overflow: "hidden", margin: "2%" }}>
+        <Box sx={{ display: "flex", float: "right" }}>
+          <Box sx={{ mt: 1, width: "20rem", mr: 5 }}>
             <TextField
               fullWidth
               id="searchNameValue"
@@ -175,7 +183,7 @@ export default function StickyHeadTable() {
               Search full name
             </Button>
           </Box>
-          <Box sx={{ mt: 1, width: '20rem' }}>
+          <Box sx={{ mt: 1, width: "20rem" }}>
             <TextField
               fullWidth
               id="searchEmailValue"
@@ -222,7 +230,7 @@ export default function StickyHeadTable() {
                         const value = row[column.id];
                         return (
                           <TableCell key={column.id} align={column.align}>
-                            {column.format && typeof value === 'string'
+                            {column.format && typeof value === "string"
                               ? column.format(value)
                               : value}
                           </TableCell>
